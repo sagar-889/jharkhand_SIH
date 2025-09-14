@@ -1,0 +1,23 @@
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ChatbotWidget from './components/ChatbotWidget';
+import './index.css';
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Toaster position="top-center" />
+      <Navbar />
+      <main className="pt-16">
+        <Outlet />
+      </main>
+      <ChatbotWidget />
+      <Footer />
+    </div>
+  );
+};
+
+export default App;
